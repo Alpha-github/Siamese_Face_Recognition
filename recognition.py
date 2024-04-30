@@ -83,7 +83,7 @@ while cap.isOpened():
             fnames.append(key)
         try:
             val = np.argmax(similarity)
-            if similarity[val]>0.6:
+            if similarity[val]>0.5 :
                 attendance.add(fnames[val])
                 cv2.putText(annotated_image, f'{fnames[val]}: {similarity[val]}', startpts_list[i], cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
                 
